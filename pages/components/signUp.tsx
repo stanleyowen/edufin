@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { LoadingAnimate } from "../api/icons";
 
-export default function SignIn() {
+export default function SignUp() {
   const [isLoading, setLoading] = useState<boolean>(false);
 
   return (
@@ -12,7 +12,7 @@ export default function SignIn() {
             <div className="justify-center items-center w-full bg-white rounded-lg shadow lg:flex md:mt-0 lg:max-w-screen-sm xl:p-0 dark:bg-gray-800">
               <div className="p-6 w-full sm:p-8 lg:p-10">
                 <h1 className="mb-3 text-2xl font-bold text-gray-900 lg:text-3xl dark:text-white">
-                  Sign In
+                  Create an Account
                 </h1>
                 <p className="mb-3 text-gray-500 dark:text-gray-400">
                   Join our community of finance to post and get access to
@@ -39,12 +39,27 @@ export default function SignIn() {
                       htmlFor="password"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      Password
+                      Your password
                     </label>
                     <input
                       type="password"
                       name="password"
                       id="password"
+                      placeholder=""
+                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="cf-password"
+                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Confirm Password
+                    </label>
+                    <input
+                      type="password"
+                      name="cf-password"
+                      id="cf-password"
                       placeholder=""
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     />
@@ -84,15 +99,15 @@ export default function SignIn() {
                     {isLoading && (
                       <LoadingAnimate className="inline w-4 h-4 mr-3 text-white animate-spin" />
                     )}
-                    Sign up
+                    Login
                   </button>
                   <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Alreadt have an account?
+                    Not registered?
                     <a
                       className="ml-1 text-blue-700 hover:underline dark:text-blue-500"
                       href="/register/"
                     >
-                      Login here.
+                      Create an account.
                     </a>
                   </div>
                 </form>
