@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useAuth } from "../../context/AuthContext";
+
 export default function Navbar() {
+    const { user } = useAuth();
+
     return (
         <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-slate-700 sticky top-0 z-50">
             <div className="container flex flex-wrap justify-between items-center mx-auto">
@@ -36,6 +40,16 @@ export default function Navbar() {
                             Sign Up
                         </button>
                     </Link>
+                    {user && (
+                        <Link href={"/logout"}>
+                            <button
+                                type="button"
+                                className="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 hover:text-slate-400"
+                            >
+                                Sign Out
+                            </button>
+                        </Link>
+                    )}
                     <button
                         data-collapse-toggle="mobile-menu-4"
                         type="button"
