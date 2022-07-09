@@ -4,6 +4,20 @@ import { LoadingAnimate } from "./api/icons";
 
 export default function SignIn() {
     const [isLoading, setLoading] = useState<boolean>(false);
+    const [data, setData] = useState<{
+        email: string;
+        password: string;
+    }>({
+        email: "",
+        password: "",
+    });
+
+    const handleData = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setData({
+            ...data,
+            [e.target.name]: e.target.value,
+        });
+    };
 
     return (
         <>
@@ -35,6 +49,8 @@ export default function SignIn() {
                                                 name="email"
                                                 id="email"
                                                 placeholder="Email Address"
+                                                value={data.email}
+                                                onChange={handleData}
                                                 className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                             />
                                         </div>
@@ -50,6 +66,8 @@ export default function SignIn() {
                                                 name="password"
                                                 id="password"
                                                 placeholder="Password"
+                                                value={data.password}
+                                                onChange={handleData}
                                                 className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                             />
                                         </div>

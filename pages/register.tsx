@@ -4,6 +4,22 @@ import { LoadingAnimate } from "./api/icons";
 
 export default function SignUp() {
     const [isLoading, setLoading] = useState<boolean>(false);
+    const [data, setData] = useState<{
+        email: string;
+        password: string;
+        confirmPassword: string;
+    }>({
+        email: "",
+        password: "",
+        confirmPassword: "",
+    });
+
+    const handleData = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setData({
+            ...data,
+            [e.target.name]: e.target.value,
+        });
+    };
 
     return (
         <>
@@ -35,6 +51,8 @@ export default function SignUp() {
                                                 name="email"
                                                 id="email"
                                                 placeholder="Email Address"
+                                                value={data.email}
+                                                onChange={handleData}
                                                 className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                             />
                                         </div>
@@ -50,21 +68,25 @@ export default function SignUp() {
                                                 name="password"
                                                 id="password"
                                                 placeholder="Password"
+                                                value={data.password}
+                                                onChange={handleData}
                                                 className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                             />
                                         </div>
                                         <div>
                                             <label
-                                                htmlFor="cf-password"
+                                                htmlFor="confirmPassword"
                                                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                             >
                                                 Confirm Password
                                             </label>
                                             <input
                                                 type="password"
-                                                name="cf-password"
-                                                id="cf-password"
+                                                name="confirmPassword"
+                                                id="confirmPassword"
                                                 placeholder="Confirm Password"
+                                                value={data.confirmPassword}
+                                                onChange={handleData}
                                                 className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                             />
                                         </div>
@@ -97,7 +119,7 @@ export default function SignUp() {
                                             {isLoading && (
                                                 <LoadingAnimate className="inline w-4 h-4 mr-3 text-white animate-spin" />
                                             )}
-                                            Login
+                                            Sign Up
                                         </button>
                                         <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
                                             Already have an account?
