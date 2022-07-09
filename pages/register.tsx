@@ -5,7 +5,6 @@ import { LoadingAnimate } from "./api/icons";
 
 export default function SignUp() {
     const { user, signUp } = useAuth();
-    console.log(user);
     const [isLoading, setLoading] = useState<boolean>(false);
     const [data, setData] = useState<{
         email: string;
@@ -16,6 +15,7 @@ export default function SignUp() {
         password: "",
         confirmPassword: "",
     });
+    console.log(user);
 
     const handleData = (e: React.ChangeEvent<HTMLInputElement>) => {
         setData({
@@ -125,7 +125,7 @@ export default function SignUp() {
                                         </div>
                                         <button
                                             disabled={isLoading}
-                                            onClick={SignUp}
+                                            onClick={() => SignUp()}
                                             className="block border-0 w-1/4 bg-slate-400/10 text-white px-4 py-1 rounded-md
           hover:bg-slate-400/20
           disabled:opacity-50 disabled:cursor-not-allowed disabled:inline-flex disabled:items-center"

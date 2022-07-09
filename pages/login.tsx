@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useAuth } from "../context/AuthContext";
 import Navbar from "../utils/components/navbar";
 import { LoadingAnimate } from "./api/icons";
 
 export default function SignIn() {
+    const { user, signIn } = useAuth();
     const [isLoading, setLoading] = useState<boolean>(false);
     const [data, setData] = useState<{
         email: string;
@@ -11,12 +13,24 @@ export default function SignIn() {
         email: "",
         password: "",
     });
+    console.log(user);
 
     const handleData = (e: React.ChangeEvent<HTMLInputElement>) => {
         setData({
             ...data,
             [e.target.name]: e.target.value,
         });
+    };
+
+    const SignIn = async () => {
+        setLoading(true);
+        try {
+            await signIn(data.email, data.password);
+        } catch (e) {
+            console.log(e);
+        }
+        console.log(data);
+        setLoading(false);
     };
 
     return (
@@ -99,7 +113,7 @@ export default function SignIn() {
                                         </div>
                                         <button
                                             disabled={isLoading}
-                                            onClick={() => setLoading(true)}
+                                            onClick={() => SignIn()}
                                             className="block border-0 w-1/4 bg-slate-400/10 text-white px-4 py-1 rounded-md
           hover:bg-slate-400/20
           disabled:opacity-50 disabled:cursor-not-allowed disabled:inline-flex disabled:items-center"
@@ -107,7 +121,7 @@ export default function SignIn() {
                                             {isLoading && (
                                                 <LoadingAnimate className="inline w-4 h-4 mr-3 text-white animate-spin" />
                                             )}
-                                            Sign up
+                                            Sign In
                                         </button>
                                         <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
                                             Not registered?
