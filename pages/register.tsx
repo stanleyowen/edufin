@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useAuth } from "../context/AuthContext";
 import Navbar from "../utils/components/navbar";
 import { LoadingAnimate } from "./api/icons";
 
 export default function SignUp() {
+    const { user, signUp } = useAuth();
+    console.log(user);
     const [isLoading, setLoading] = useState<boolean>(false);
     const [data, setData] = useState<{
         email: string;
@@ -19,6 +22,17 @@ export default function SignUp() {
             ...data,
             [e.target.name]: e.target.value,
         });
+    };
+
+    const SignUp = async () => {
+        setLoading(true);
+        try {
+            await signUp(data.email, data.password);
+        } catch (e) {
+            console.log(e);
+        }
+        console.log(data);
+        setLoading(false);
     };
 
     return (
@@ -111,7 +125,7 @@ export default function SignUp() {
                                         </div>
                                         <button
                                             disabled={isLoading}
-                                            onClick={() => setLoading(true)}
+                                            onClick={SignUp}
                                             className="block border-0 w-1/4 bg-slate-400/10 text-white px-4 py-1 rounded-md
           hover:bg-slate-400/20
           disabled:opacity-50 disabled:cursor-not-allowed disabled:inline-flex disabled:items-center"
