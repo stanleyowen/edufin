@@ -26,21 +26,26 @@ export default function SignUp() {
 
     const SignUp = async () => {
         setLoading(true);
-        try {
-            await signUp(data.email, data.password);
-        } catch (e: any) {
-            if (
-                e.code === "auth/user-not-found" ||
-                e.code === "auth/wrong-password"
-            )
-                setError("Invalid credentials. Please try again.");
-            else if (e.code === "user-token-expired")
-                setError("Your session has expired. Please sign in again.");
-            else if (e.code === "auth/email-already-in-use")
-                setError("Email already in use. Please try again.");
-            else setError(e.message);
-        }
-        setLoading(false);
+
+        if (data.password !== data.confirmPassword)
+            setError("Passwords do not match");
+        else
+            try {
+                await signUp(data.email, data.password);
+            } catch (e: any) {
+                if (
+                    e.code === "auth/user-not-found" ||
+                    e.code === "auth/wrong-password"
+                )
+                    setError("Invalid credentials. Please try again.");
+                else if (e.code === "user-token-expired")
+                    setError("Your session has expired. Please sign in again.");
+                else if (e.code === "auth/email-already-in-use")
+                    setError("Email already in use. Please try again.");
+                else setError(e.message);
+            }
+
+        setTimeout(() => setLoading(false), 100);
     };
 
     return (
