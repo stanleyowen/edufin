@@ -31,7 +31,7 @@ export default function SignUp() {
             setError("Passwords do not match");
         else
             try {
-                await signUp(data.email, data.password);
+                await signUp(data);
             } catch (e: any) {
                 if (
                     e.code === "auth/user-not-found" ||

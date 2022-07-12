@@ -25,7 +25,7 @@ export default function SignIn() {
     const SignIn = async () => {
         setLoading(true);
         try {
-            await signIn(data.email, data.password);
+            await signIn(data);
         } catch (e: any) {
             if (
                 e.code === "auth/user-not-found" ||

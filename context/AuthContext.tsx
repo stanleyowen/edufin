@@ -29,11 +29,23 @@ export const AuthContextProvider = ({
         return () => unsubscribe();
     }, []);
 
-    const signUp = (email: string, password: string) => {
+    const signUp = ({
+        email,
+        password,
+    }: {
+        email: string;
+        password: string;
+    }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
-    const signIn = (email: string, password: string) => {
+    const signIn = ({
+        email,
+        password,
+    }: {
+        email: string;
+        password: string;
+    }) => {
         return signInWithEmailAndPassword(auth, email, password);
     };
 
