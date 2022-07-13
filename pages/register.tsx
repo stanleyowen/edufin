@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import Navbar from "../utils/components/navbar";
@@ -146,12 +147,12 @@ export default function SignUp() {
                                         </button>
                                         <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
                                             Already have an account?
-                                            <a
+                                            <Link
                                                 className="ml-1 text-blue-700 hover:underline dark:text-blue-500"
                                                 href="/login"
                                             >
                                                 Login here.
-                                            </a>
+                                            </Link>
                                         </div>
                                     </form>
                                 </div>
