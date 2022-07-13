@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import Navbar from "../utils/components/navbar";
@@ -26,6 +27,7 @@ export default function SignIn() {
         setLoading(true);
         try {
             await signIn(data);
+            window.location.href = "/";
         } catch (e: any) {
             if (
                 e.code === "auth/user-not-found" ||
@@ -128,12 +130,12 @@ export default function SignIn() {
                                         </button>
                                         <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
                                             Not registered?
-                                            <a
+                                            <Link
                                                 className="ml-1 text-blue-700 hover:underline dark:text-blue-500"
                                                 href="/register/"
                                             >
                                                 Create an account.
-                                            </a>
+                                            </Link>
                                         </div>
                                     </form>
                                 </div>

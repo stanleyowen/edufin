@@ -32,6 +32,7 @@ export default function SignUp() {
         else
             try {
                 await signUp(data);
+                window.location.href = "/";
             } catch (e: any) {
                 if (
                     e.code === "auth/user-not-found" ||
