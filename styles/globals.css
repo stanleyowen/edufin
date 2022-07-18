@@ -33,3 +33,25 @@ input {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+.public-DraftEditor-content {
+    min-height: -webkit-fill-available;
+}
+
+body {
+    height: 100vh;
+}
+
+#__next {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.rdw-editor-wrapper {
+    height: 100%;
+    margin: 0% 10%;
+}
+.rdw-editor-main {
+    height: 85% !important;
+}

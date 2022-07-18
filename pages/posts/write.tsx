@@ -9,7 +9,9 @@ export default function write() {
     return (
         <>
             <Navbar />
-            <BlogEditor />
+            <div className="bg-slate-800" style={{ height: "100%", flex: "1" }}>
+                <BlogEditor />
+            </div>
         </>
     );
 }

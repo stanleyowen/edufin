@@ -9,6 +9,8 @@ const BlogEditor = () => {
         <Editor
             editorState={editorState}
             onEditorStateChange={(e) => setEditorState(e)}
+            wrapperClassName="bg-slate-400"
+            toolbarClassName="bg-slate-400"
         />
     );
 };
