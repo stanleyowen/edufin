@@ -1,10 +1,26 @@
 import { Editor } from "react-draft-wysiwyg";
-import { EditorState } from "draft-js";
+import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
 import { useState } from "react";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { stateToHTML } from "draft-js-export-html";
+import { useAuth } from "../../../context/AuthContext";
 
 const BlogEditor = () => {
+    const { user } = useAuth();
     const [editorState, setEditorState] = useState(EditorState.createEmpty());
+    const [title, setTitle] = useState<string>("");
+
+    const createPost = async () => {
+        console.log("clicked");
+        await addDoc(collection(getFirestore(), "posts"), {
+            title,
+            email: user.email,
+            content: String(stateToHTML(editorState.getCurrentContent())),
+        })
+            .then(() => console.log("saved"))
+            .catch((err) => console.log(err));
+    };
     return (
         <>
             <div className="flex justify-end" style={{ margin: "2% 10%" }}>
@@ -30,7 +46,10 @@ const BlogEditor = () => {
                 >
                     Cancel
                 </button>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded ml-10">
+                <button
+                    onClick={() => createPost()}
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded ml-10"
+                >
                     Save
                 </button>
             </div>
