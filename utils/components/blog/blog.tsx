@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export interface IBlog{
+export interface IBlog {
     title: string;
     content: string;
     author: string;
@@ -8,14 +8,16 @@ export interface IBlog{
     modifiedAt?: string;
 }
 
-export default function Blog(data: IBlog){
+export default function Blog(data: IBlog) {
     return (
-        <div className="blog">
-            <h1 className='blog-title'>{data.title}</h1>
-            <span className='blog-metadata'>{data.author} ⋄ {data.modifiedAt ?? data.createdAt}</span>
-            <div className='blog-content'>
-                {data.content}
-            </div>
+        <div className="m-5 shadow-md py-3 px-10">
+            <h1 className="font-medium leading-tight text-4xl mt-0">
+                {data.title}
+            </h1>
+            <span className="text-gray-400">
+                {data.author} ⋄ {data.modifiedAt ?? data.createdAt}
+            </span>
+            <div className="mt-3">{data.content}</div>
         </div>
-    )
+    );
 }
