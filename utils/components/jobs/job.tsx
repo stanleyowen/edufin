@@ -6,6 +6,8 @@ export interface IJob {
     content: string;
     email: string;
     createdAt: string;
+    location: string;
+    description?: string;
 }
 
 export default function Job(data: IJob) {
