@@ -12,7 +12,7 @@ export default function Navbar() {
                     <a className="flex items-center">
                         <span className="mr-3 h-6 sm:h-9">
                             <Image
-                                src="/favicon.ico"
+                                src="/edufin.png"
                                 alt="Edufin Logo"
                                 width={36}
                                 height={36}
