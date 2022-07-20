@@ -3,22 +3,26 @@ import React from "react";
 export interface IJob {
     title: string;
     company: string;
-    description: string;
-    link: string;
+    content: string;
+    email: string;
+    createdAt: string;
 }
 
 export default function Job(data: IJob) {
     return (
         <>
-            <a className="m-5 shadow-md py-3 px-10" href={data.link}>
+            <div className="m-5 shadow-md py-3 px-10">
                 <h1 className="font-medium leading-tight text-3xl mt-0">
                     {data.title}
                 </h1>
                 <span className="text-gray-400">
-                    {data.company} ⋄ {data.link}
+                    {data.company} ⋄ {data.email}
                 </span>
-                <div className="mt-3">{data.description}</div>
-            </a>
+                <div
+                    className="mt-3"
+                    dangerouslySetInnerHTML={{ __html: data.content }}
+                ></div>
+            </div>
         </>
     );
 }
