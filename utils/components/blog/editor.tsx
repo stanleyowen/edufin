@@ -17,8 +17,12 @@ const BlogEditor = () => {
             title,
             email: user.email,
             content: String(stateToHTML(editorState.getCurrentContent())),
+            createdAt: new Date().toLocaleDateString(),
         })
-            .then(() => console.log("saved"))
+            .then(() => {
+                console.log("saved");
+                window.location.href = "/posts/articles";
+            })
             .catch((err) => console.log(err));
     };
     return (
