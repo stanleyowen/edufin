@@ -6,12 +6,6 @@ const Home: NextPage = () => {
     return (
         <>
             <Navbar />
-            {/* <Blog
-                title="hi"
-                content="Lorem ipsum Duis aute culpa ipsum et minim sit anim proident. Ipsum velit eiusmod anim consequat dolore nostrud occaecat sint voluptate duis sunt veniam irure. Proident occaecat elit cupidatat elit sint exercitation non reprehenderit sunt non. Ullamco sit voluptate Lorem nulla anim et proident consectetur voluptate ut. Amet eu deserunt deserunt dolore eu excepteur irure officia commodo non reprehenderit aute. Ullamco mollit ullamco nisi ut ad non ut excepteur et."
-                author="kimlimjustin"
-                createdAt="just now"
-            /> */}
             <section className="bg-white dark:bg-gray-900">
                 <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
                     <div className="mr-auto place-self-center lg:col-span-7">
@@ -42,9 +36,10 @@ const Home: NextPage = () => {
                         </a>
                     </div>
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                        <img
+                        <Image
                             src="https://user-images.githubusercontent.com/69080584/181148624-1a6a0374-6175-4160-a1f6-e824269f5bab.png"
                             alt="FInancial Education"
+                            layout="fill"
                         />
                     </div>
                 </div>
