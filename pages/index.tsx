@@ -130,7 +130,7 @@ const Home: NextPage = () => {
                                 All Ages
                             </h3>
                             <p className="text-gray-500 dark:text-gray-400">
-                                Relatable to all walk of people, whether you're
+                                Relatable to all walk of people, whether you&apos;re
                                 a student, an umployed, or even an elderly.
                             </p>
                         </div>
