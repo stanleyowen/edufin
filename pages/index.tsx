@@ -7,8 +7,8 @@ const Home: NextPage = () => {
         <>
             <Navbar />
             <section className="bg-white dark:bg-gray-900">
-                <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-                    <div className="mr-auto place-self-center lg:col-span-7">
+                <div className="grid max-w-screen-xl px-4 py-8 mx-auto md:gap-8 md:gap-0 md:py-16 md:grid-cols-12">
+                    <div className="mr-auto place-self-center md:col-span-7">
                         <h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">
                             One step ahead to your financial dream
                         </h1>
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
                             </svg>
                         </a>
                     </div>
-                    <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                    <div className="hidden md:mt-0 md:col-span-5 md:flex">
                         <Image
                             width={600}
                             height={400}
@@ -217,10 +217,7 @@ const Home: NextPage = () => {
                 <div className="mx-auto max-w-screen-xl">
                     <div className="md:flex md:justify-between">
                         <div className="mb-6 md:mb-0">
-                            <a
-                                href="https://flowbite.com"
-                                className="flex items-center"
-                            >
+                            <a href="/" className="flex items-center">
                                 <Image
                                     src="/edufin.png"
                                     alt="Edufin Logo"
@@ -262,7 +259,10 @@ const Home: NextPage = () => {
                                 </h2>
                                 <ul className="text-gray-600 dark:text-gray-400">
                                     <li>
-                                        <a href="#" className="hover:underline">
+                                        <a
+                                            className="hover:underline"
+                                            href="https://discord.gg/YQU4d9vewm"
+                                        >
                                             Discord
                                         </a>
                                     </li>
