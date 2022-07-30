@@ -7,7 +7,7 @@ const Home: NextPage = () => {
         <>
             <Navbar />
             <section className="bg-white dark:bg-gray-900">
-                <div className="grid max-w-screen-xl px-4 py-8 mx-auto md:gap-8 md:gap-0 md:py-16 md:grid-cols-12">
+                <div className="grid max-w-screen-xl px-4 py-8 mx-auto md:gap-0 md:py-16 md:grid-cols-12">
                     <div className="mr-auto place-self-center md:col-span-7">
                         <h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">
                             One step ahead to your financial dream
@@ -46,29 +46,34 @@ const Home: NextPage = () => {
                 </div>
             </section>
 
+            <section className="bg-gray-100 dark:bg-gray-900">
+                <div className="mb-8 lg:mb-16 text-center">
+                    <h2 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white">
+                        Educating to elevate money making
+                    </h2>
+                    <p className="text-gray-500 dark:text-gray-400">
+                        We come to help and provide a better education about
+                        money to build the relevant mindset of money perspective
+                        and money management.
+                    </p>
+                </div>
+                <div className=" mb-8 lg:mb-16 text-center">
+                    <h2 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white">
+                        Offering job opportunity only for you
+                    </h2>
+                    <p className="text-gray-500 dark:text-gray-400">
+                        We come to help and provide a better education about
+                        money to build the relevant mindset of money perspective
+                        and money management.
+                    </p>
+                </div>
+            </section>
+
             <section className="bg-gray-50 dark:bg-gray-800">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-                    <div className="max-w-screen-md mb-8 lg:mb-16">
-                        <h2 className="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">
-                            Educating to elevate money making
-                        </h2>
-                        <p className="text-gray-500 sm:text-xl dark:text-gray-400">
-                            We come to help and provide a better education about
-                            money to build the relevant mindset of money
-                            perspective and money management.
-                        </p>
-                    </div>
-                    <div className="max-w-screen-md mb-8 lg:mb-16">
-                        <h2 className="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">
-                            Offering job opportunity only for you
-                        </h2>
-                        <p className="text-gray-500 sm:text-xl dark:text-gray-400">
-                            We come to help and provide a better education about
-                            money to build the relevant mindset of money
-                            perspective and money management.
-                        </p>
-                    </div>
-
+                    <h2 className="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white text-center pb-4">
+                        Features
+                    </h2>
                     <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                         <div>
                             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
@@ -136,58 +141,6 @@ const Home: NextPage = () => {
                                 elderly.
                             </p>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="bg-gray-50 dark:bg-gray-800">
-                <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-                    <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
-                        <h2 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.
-                        </h2>
-                        <p className="mb-4 font-light">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Phasellus eu finibus nulla. Donec sagittis
-                            ornare sapien, sed vulputate augue ultricies eget.
-                            Cras tempus sit amet diam eget commodo. Donec
-                            ullamcorper elit a felis sodales, nec condimentum
-                            lectus venenatis. Aenean scelerisque vestibulum
-                            ante, in pellentesque felis posuere et. Nam
-                            placerat, tortor ac volutpat tempor, mi erat
-                            efficitur sapien, in iaculis ex nisi a tellus. Etiam
-                            iaculis congue eros, a lacinia mauris feugiat ut.
-                        </p>
-                        <p className="mb-4 font-medium">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Phasellus eu finibus nulla. Donec sagittis
-                            ornare sapien, sed vulputate augue ultricies eget.
-                            Cras tempus sit amet diam eget commodo. Donec
-                            ullamcorper elit a felis sodales, nec condimentum
-                            lectus venenatis. Aenean scelerisque vestibulum
-                            ante, in pellentesque felis posuere et. Nam
-                            placerat, tortor ac volutpat tempor, mi erat
-                            efficitur sapien, in iaculis ex nisi a tellus.
-                        </p>
-                        <a
-                            href="#"
-                            className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
-                        >
-                            Learn more
-                            <svg
-                                className="ml-1 w-6 h-6"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                    clipRule="evenodd"
-                                ></path>
-                            </svg>
-                        </a>
                     </div>
                 </div>
             </section>
