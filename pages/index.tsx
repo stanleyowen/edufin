@@ -37,9 +37,10 @@ const Home: NextPage = () => {
                     </div>
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                         <Image
-                            src="https://user-images.githubusercontent.com/69080584/181148624-1a6a0374-6175-4160-a1f6-e824269f5bab.png"
+                            width={600}
+                            height={400}
                             alt="FInancial Education"
-                            layout="fill"
+                            src="https://user-images.githubusercontent.com/69080584/181148624-1a6a0374-6175-4160-a1f6-e824269f5bab.png"
                         />
                     </div>
                 </div>
@@ -130,15 +131,16 @@ const Home: NextPage = () => {
                                 All Ages
                             </h3>
                             <p className="text-gray-500 dark:text-gray-400">
-                                Relatable to all walk of people, whether you&apos;re
-                                a student, an umployed, or even an elderly.
+                                Relatable to all walk of people, whether
+                                you&apos;re a student, an umployed, or even an
+                                elderly.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="bg-gray-50 dark:bg-gray-900 dark:bg-gray-800">
+            <section className="bg-gray-50 dark:bg-gray-800">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
                         <h2 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
