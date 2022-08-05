@@ -7,7 +7,7 @@ import {
     getFirestore,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import Blog, { IBlog } from "../../utils/components/blog/blogs";
+import Blog, { IBlog } from "../../utils/components/blog/blog";
 import Navbar from "../../utils/components/navbar";
 
 const Article = () => {
