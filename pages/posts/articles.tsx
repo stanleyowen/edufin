@@ -16,7 +16,18 @@ export default function Articles() {
         // get latest 10 posts from `posts` firestore collection
         getDocs(collection(getFirestore(), "posts")).then((snap) => {
             let docs = snap.docs.map((doc) => {
-                return Object.assign(doc.data(), { id: doc.id });
+                // trim the content to only show the first 40 words
+                let content = doc.data().content;
+                content = content
+                    .split(" ")
+                    .slice(0, 40)
+                    .join(" ")
+                    .concat("...");
+
+                return Object.assign(doc.data(), {
+                    id: doc.id,
+                    content,
+                });
             });
             setArticles(docs as IBlog[]);
             setIsLoading(false);
