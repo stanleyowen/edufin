@@ -6,7 +6,7 @@ import {
     getFirestore,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import Blog, { IBlog } from "../../utils/components/blog/blog";
+import Blogs, { IBlog } from "../../utils/components/blog/blogs";
 import Navbar from "../../utils/components/navbar";
 
 export default function Articles() {
@@ -40,14 +40,13 @@ export default function Articles() {
                 ) : (
                     Articles?.map((element) => {
                         return (
-                            <Blog
+                            <Blogs
                                 id={element.id}
                                 key={element.createdAt}
                                 title={element.title}
                                 content={element.content}
                                 email={element.email}
                                 createdAt={element.createdAt}
-                                link={true}
                             />
                         );
                     })
