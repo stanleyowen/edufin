@@ -6,11 +6,18 @@ export interface IBlog {
     email: string;
     createdAt: string;
     modifiedAt?: string;
+    link?: boolean;
+    id: string;
 }
 
 export default function Blog(data: IBlog) {
     return (
-        <div className="m-5 shadow-md py-3 px-10 shadow-neutral-500">
+        <div
+            className="m-5 shadow-md py-3 px-10 shadow-neutral-500"
+            onClick={() =>
+                data.link ? (window.location.href = `/posts/${data.id}`) : null
+            }
+        >
             <h1 className="font-medium leading-tight text-4xl mt-0">
                 {data.title}
             </h1>
