@@ -13,7 +13,10 @@ export interface IBlog {
 export default function Blog(data: IBlog) {
     return (
         <div
-            className="m-5 shadow-md py-3 px-10 shadow-neutral-500"
+            className={
+                "m-5 shadow-md py-3 px-10 shadow-neutral-500" +
+                (data.link ? " cursor-pointer" : "")
+            }
             onClick={() =>
                 data.link ? (window.location.href = `/posts/${data.id}`) : null
             }
