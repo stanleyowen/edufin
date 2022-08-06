@@ -53,7 +53,7 @@ export default function SignUp() {
     return (
         <>
             <Navbar />
-            <div className="dark:bg-slate-800 dark:text-slate-400">
+            <div className="dark:bg-slate-900 dark:text-slate-400">
                 <div className="mx-auto container flex items-center" id="nav">
                     <div className="w-full pt-2 p-4">
                         <div className="flex flex-col justify-center items-center px-6 pt-8 mx-auto md:h-screen pt:mt-0">
@@ -146,7 +146,7 @@ export default function SignUp() {
                                             Sign Up
                                         </button>
                                         <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                                            Already have an account?
+                                            Already have an account?{" "}
                                             <Link
                                                 className="ml-1 text-blue-700 hover:underline dark:text-blue-500"
                                                 href="/login"
