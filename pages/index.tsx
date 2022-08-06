@@ -46,7 +46,7 @@ const Home: NextPage = () => {
                 </div>
             </section>
 
-            <section className="bg-gray-100 dark:bg-gray-900">
+            <section className="bg-gray-100 dark:bg-gray-900 pt-5">
                 <div className="mb-8 lg:mb-16 text-center">
                     <h2 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white">
                         Educating to elevate money making

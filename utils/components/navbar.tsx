@@ -29,7 +29,7 @@ export default function Navbar() {
                             <Link href={"/logout"}>
                                 <button
                                     type="button"
-                                    className="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 hover:text-slate-400"
+                                    className="text-dark dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 hover:text-slate-400"
                                 >
                                     Sign Out
                                 </button>
@@ -45,7 +45,7 @@ export default function Navbar() {
                             <Link href={"/jobs/write"}>
                                 <button
                                     type="button"
-                                    className="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 hover:text-slate-400"
+                                    className="text-dark dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 hover:text-slate-400"
                                 >
                                     Post a Job
                                 </button>
@@ -64,7 +64,7 @@ export default function Navbar() {
                             <Link href={"/register"}>
                                 <button
                                     type="button"
-                                    className="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 hover:text-slate-400"
+                                    className="text-dark dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 hover:text-slate-400"
                                 >
                                     Sign Up
                                 </button>

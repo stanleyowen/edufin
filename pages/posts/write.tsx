@@ -10,7 +10,7 @@ export default function write() {
         <>
             <Navbar />
             <div
-                className="bg-slate-800"
+                className="dark:bg-slate-800"
                 style={{
                     height: "100%",
                     flex: "1",
