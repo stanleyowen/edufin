@@ -20,7 +20,7 @@ export default function SignIn() {
             <Navbar />
             <div
                 className="dark:bg-slate-900 dark:text-slate-300"
-                style={{ height: "inherit" }}
+                style={{ flex: "1" }}
             >
                 {isLoading ? (
                     <div className="flex justify-center">
