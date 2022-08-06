@@ -13,7 +13,10 @@ export interface IJob {
 export default function Job(data: IJob) {
     return (
         <>
-            <div className="m-5 shadow-md py-3 px-10 rounded-lg dark:bg-gray-800">
+            <div
+                className="m-5 shadow-md py-3 px-10 rounded-lg dark:bg-gray-800"
+                style={{ maxWidth: "800px", margin: "20px auto" }}
+            >
                 <h1 className="font-medium leading-tight text-3xl mt-0">
                     {data.title}
                 </h1>
