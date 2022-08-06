@@ -38,25 +38,27 @@ const Article = () => {
                 className="dark:bg-slate-800 dark:text-slate-300"
                 style={{ flex: "1" }}
             >
-                {isLoading ? (
-                    <div className="flex justify-center">
-                        <div
-                            className="spinner-border text-primary"
-                            role="status"
-                        >
-                            <span className="sr-only">Loading...</span>
+                <div style={{ maxWidth: "1200px", margin: "auto" }}>
+                    {isLoading ? (
+                        <div className="flex justify-center">
+                            <div
+                                className="spinner-border text-primary"
+                                role="status"
+                            >
+                                <span className="sr-only">Loading...</span>
+                            </div>
                         </div>
-                    </div>
-                ) : (
-                    <Blog
-                        id={post.id}
-                        key={post.createdAt}
-                        title={post.title}
-                        content={post.content}
-                        email={post.email}
-                        createdAt={post.createdAt}
-                    />
-                )}
+                    ) : (
+                        <Blog
+                            id={post.id}
+                            key={post.createdAt}
+                            title={post.title}
+                            content={post.content}
+                            email={post.email}
+                            createdAt={post.createdAt}
+                        />
+                    )}
+                </div>
             </div>
         </>
     );

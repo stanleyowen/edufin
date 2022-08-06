@@ -42,29 +42,31 @@ export default function Articles() {
                 className="dark:bg-slate-800 dark:text-slate-300"
                 style={{ flex: "1" }}
             >
-                {isLoading ? (
-                    <div className="flex justify-center">
-                        <div
-                            className="spinner-border text-primary"
-                            role="status"
-                        >
-                            <span className="sr-only">Loading...</span>
+                <div style={{ maxWidth: "800px", margin: "auto" }}>
+                    {isLoading ? (
+                        <div className="flex justify-center">
+                            <div
+                                className="spinner-border text-primary"
+                                role="status"
+                            >
+                                <span className="sr-only">Loading...</span>
+                            </div>
                         </div>
-                    </div>
-                ) : (
-                    Articles?.map((element) => {
-                        return (
-                            <Blogs
-                                id={element.id}
-                                key={element.createdAt}
-                                title={element.title}
-                                content={element.content}
-                                email={element.email}
-                                createdAt={element.createdAt}
-                            />
-                        );
-                    })
-                )}
+                    ) : (
+                        Articles?.map((element) => {
+                            return (
+                                <Blogs
+                                    id={element.id}
+                                    key={element.createdAt}
+                                    title={element.title}
+                                    content={element.content}
+                                    email={element.email}
+                                    createdAt={element.createdAt}
+                                />
+                            );
+                        })
+                    )}
+                </div>
             </div>
         </>
     );
