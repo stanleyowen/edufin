@@ -35,7 +35,7 @@ const Article = () => {
         <>
             <Navbar />
             <div
-                className="dark:bg-slate-800 dark:text-slate-300"
+                className="dark:bg-slate-900 dark:text-slate-300"
                 style={{ flex: "1" }}
             >
                 <div style={{ maxWidth: "1200px", margin: "auto" }}>

@@ -13,7 +13,7 @@ export default function Blogs(data: IBlog) {
     return (
         <div
             className={
-                "m-5 shadow-md pt-3 pb-6 px-10 shadow-neutral-500 cursor-pointer"
+                "m-5 shadow-md rounded-lg pt-3 pb-6 px-10 shadow cursor-pointer dark:bg-gray-800"
             }
             onClick={() => (window.location.href = `/posts/${data.id}`)}
         >
