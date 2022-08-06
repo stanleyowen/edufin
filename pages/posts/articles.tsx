@@ -38,7 +38,10 @@ export default function Articles() {
     return (
         <>
             <Navbar />
-            <div className="dark:bg-slate-800 dark:text-slate-300">
+            <div
+                className="dark:bg-slate-800 dark:text-slate-300"
+                style={{ flex: "1" }}
+            >
                 {isLoading ? (
                     <div className="flex justify-center">
                         <div
