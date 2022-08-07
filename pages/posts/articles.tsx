@@ -4,6 +4,8 @@ import {
     getDoc,
     getDocs,
     getFirestore,
+    orderBy,
+    query,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Blogs, { IBlog } from "../../utils/components/blog/blogs";
@@ -14,7 +16,9 @@ export default function Articles() {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     useEffect(() => {
         // get latest 10 posts from `posts` firestore collection
-        getDocs(collection(getFirestore(), "posts")).then((snap) => {
+        getDocs(
+            query(collection(getFirestore(), "posts"), orderBy("createdAt"))
+        ).then((snap) => {
             let docs = snap.docs.map((doc) => {
                 // trim the content to only show the first 40 words
                 let content = doc.data().content;
@@ -57,7 +61,7 @@ export default function Articles() {
                             return (
                                 <Blogs
                                     id={element.id}
-                                    key={element.createdAt}
+                                    key={element.id}
                                     title={element.title}
                                     content={element.content}
                                     email={element.email}
