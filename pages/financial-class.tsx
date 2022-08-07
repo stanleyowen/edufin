@@ -1,33 +1,7 @@
 import Link from "next/link";
-import { useState } from "react";
-import { useAuth } from "../context/AuthContext";
 import Navbar from "../utils/components/navbar";
-import { Alert, LoadingAnimate } from "./api/icons";
 
 export default function SignIn() {
-    const { user, resetPassword } = useAuth();
-    const [isLoading, setLoading] = useState<boolean>(false);
-    const [error, setError] = useState<string | null>(null);
-    const [email, setEmail] = useState<string>("");
-
-    const SignIn = async () => {
-        setLoading(true);
-        try {
-            await resetPassword(email);
-            window.location.href = "/";
-        } catch (e: any) {
-            if (
-                e.code === "auth/user-not-found" ||
-                e.code === "auth/wrong-password"
-            )
-                setError("Invalid credentials. Please try again.");
-            else if (e.code === "user-token-expired")
-                setError("Your session has expired. Please sign in again.");
-            else setError(e.message);
-        }
-        setLoading(false);
-    };
-
     return (
         <>
             <Navbar />

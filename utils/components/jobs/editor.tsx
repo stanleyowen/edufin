@@ -13,7 +13,6 @@ const JobEditor = () => {
     const [company, setCompany] = useState<string>("");
 
     const createPost = async () => {
-        console.log("clicked");
         await addDoc(collection(getFirestore(), "jobs"), {
             title,
             email: user.email,

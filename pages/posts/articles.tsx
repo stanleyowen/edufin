@@ -1,7 +1,5 @@
 import {
     collection,
-    doc,
-    getDoc,
     getDocs,
     getFirestore,
     orderBy,

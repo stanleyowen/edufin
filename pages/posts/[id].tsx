@@ -1,11 +1,5 @@
 import { useRouter } from "next/router";
-import {
-    collection,
-    doc,
-    getDoc,
-    getDocs,
-    getFirestore,
-} from "firebase/firestore";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Blog, { IBlog } from "../../utils/components/blog/blog";
 import Navbar from "../../utils/components/navbar";

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import Navbar from "../utils/components/navbar";
 import { LoadingAnimate } from "./api/icons";

@@ -5,7 +5,7 @@ import Navbar from "../utils/components/navbar";
 import { Alert, LoadingAnimate } from "./api/icons";
 
 export default function SignIn() {
-    const { user, signIn } = useAuth();
+    const { signIn } = useAuth();
     const [isLoading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
     const [data, setData] = useState<{
