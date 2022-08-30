@@ -10,17 +10,17 @@ const Home: NextPage = () => {
                 <div className="grid max-w-screen-xl px-4 py-8 mx-auto md:gap-0 md:py-16 md:grid-cols-12">
                     <div className="mr-auto place-self-center md:col-span-7">
                         <h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">
-                            One step ahead to your financial dream
+                            Selangkah menuju mimpi finansial anda
                         </h1>
                         <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                            Learning financial education with us to make your
-                            money.
+                            Mempelajari edukasi finansial dengan kami untuk
+                            membantu anda mendapatkan uang.
                         </p>
                         <a
                             href="/register"
                             className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
                         >
-                            Get started
+                            Mulai
                             <svg
                                 className="w-5 h-5 ml-2 -mr-1"
                                 fill="currentColor"
@@ -49,22 +49,21 @@ const Home: NextPage = () => {
             <section className="bg-gray-100 dark:bg-gray-900 pt-5">
                 <div className="mb-8 lg:mb-16 text-center">
                     <h2 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white">
-                        Educating to elevate money making
+                        Mempelajari peningkatan pemasukan anda
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400">
-                        We come to help and provide a better education about
-                        money to build the relevant mindset of money perspective
-                        and money management.
+                        Kami disini untuk membantu dan menyediakan kualitas
+                        pendidik yang lebih baik demi membangun mindset tentang
+                        uang anda menjadi lebih matang.
                     </p>
                 </div>
                 <div className=" mb-8 lg:mb-16 text-center">
                     <h2 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white">
-                        Offering job opportunity only for you
+                        Penawaran kerja hanya untuk kamu
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400">
-                        We come to help and provide a better education about
-                        money to build the relevant mindset of money perspective
-                        and money management.
+                        Kami juga membantu anda untuk mendapatkan informasi
+                        lowongan pekerjaan dari perusahaan-perusahaan.
                     </p>
                 </div>
             </section>
@@ -72,7 +71,7 @@ const Home: NextPage = () => {
             <section className="bg-gray-50 dark:bg-gray-800">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                     <h2 className="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white text-center pb-4">
-                        Features
+                        Fitur
                     </h2>
                     <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                         <div>
@@ -91,10 +90,10 @@ const Home: NextPage = () => {
                                 </svg>
                             </div>
                             <h3 className="mb-2 text-xl font-bold dark:text-white">
-                                Up to date
+                                Up to Date
                             </h3>
                             <p className="text-gray-500 dark:text-gray-400">
-                                Financial news always keep updated
+                                Berita finansial yang akan terus kami update
                             </p>
                         </div>
                         <div>
@@ -109,11 +108,11 @@ const Home: NextPage = () => {
                                 </svg>
                             </div>
                             <h3 className="mb-2 text-xl font-bold dark:text-white">
-                                Exclusive
+                                Ekslusif buat anda
                             </h3>
                             <p className="text-gray-500 dark:text-gray-400">
-                                Exclusively educate yourself with financial
-                                knowledge
+                                Edukasikan diri anda mengenai pembelajaran
+                                finansial secara ekslusif.
                             </p>
                         </div>
                         <div>
@@ -133,12 +132,11 @@ const Home: NextPage = () => {
                                 </svg>
                             </div>
                             <h3 className="mb-2 text-xl font-bold dark:text-white">
-                                All Ages
+                                Semua usia
                             </h3>
                             <p className="text-gray-500 dark:text-gray-400">
-                                Relatable to all walk of people, whether
-                                you&apos;re a student, an umployed, or even an
-                                elderly.
+                                Dapat digunakan untuk semua kategori usia, mulai
+                                dari anak-anak hingga dewasa.
                             </p>
                         </div>
                     </div>
@@ -149,12 +147,12 @@ const Home: NextPage = () => {
                 <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                     <div className="mx-auto max-w-screen-sm text-center">
                         <h2 className="mb-4 text-4xl font-extrabold leading-tight text-gray-900 dark:text-white">
-                            Start creating your Edufin Account Today
+                            Buat akun Edufin anda sekarang
                         </h2>
                         <p className="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">
-                            Join our community of finance to post and get access
-                            to hundreds of articles, podcasts, online courses,
-                            and more.
+                            Ikutilah komunitas daripada finansial kami untuk
+                            memposting dan menggapai akses ke ratusan artikel,
+                            podcast, dsb.
                         </p>
                         <a
                             href="#"
