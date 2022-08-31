@@ -38,7 +38,7 @@ export const AuthContextProvider = ({
 
     const setLanguagePreference = (language: string) => {
         localStorage.setItem("languagesPreference", language);
-        return language;
+        return window.location.reload();
     };
 
     const signUp = ({

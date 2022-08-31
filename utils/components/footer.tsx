@@ -37,26 +37,24 @@ const Footer: NextPage = () => {
                                 </h2>
                                 <ul className="text-gray-600 dark:text-gray-400">
                                     <li className="mb-4">
-                                        <a
-                                            href="/posts/articles"
+                                        <button
                                             className="hover:underline"
-                                        >
-                                            {
-                                                lang[getLanguagePreference()]
-                                                    .section1Lang1
+                                            onClick={() =>
+                                                setLanguagePreference("enUS")
                                             }
-                                        </a>
+                                        >
+                                            English
+                                        </button>
                                     </li>
                                     <li>
-                                        <a
-                                            href="/jobs"
+                                        <button
                                             className="hover:underline"
-                                        >
-                                            {
-                                                lang[getLanguagePreference()]
-                                                    .section1Lang2
+                                            onClick={() =>
+                                                setLanguagePreference("idID")
                                             }
-                                        </a>
+                                        >
+                                            Bahasa Indonesia
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
