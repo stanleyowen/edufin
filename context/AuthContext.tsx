@@ -30,6 +30,17 @@ export const AuthContextProvider = ({
         return () => unsubscribe();
     }, []);
 
+    const getLanguagePreference = () => {
+        const languagesPreference = localStorage.getItem("languagesPreference");
+        if (languagesPreference) return languagesPreference;
+        else return "idID";
+    };
+
+    const setLanguagePreference = (language: string) => {
+        localStorage.setItem("languagesPreference", language);
+        return language;
+    };
+
     const signUp = ({
         email,
         password,
@@ -61,7 +72,15 @@ export const AuthContextProvider = ({
 
     return (
         <AuthContext.Provider
-            value={{ user, signIn, signUp, resetPassword, logOut }}
+            value={{
+                user,
+                signIn,
+                signUp,
+                resetPassword,
+                logOut,
+                getLanguagePreference,
+                setLanguagePreference,
+            }}
         >
             {isLoading ? null : children}
         </AuthContext.Provider>

@@ -35,8 +35,9 @@ export default function Articles() {
             setIsLoading(false);
         });
     }, []);
-    console.log(Articles);
+
     useEffect(() => console.log(Articles), [Articles]);
+
     return (
         <>
             <Navbar />

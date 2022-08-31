@@ -1,8 +1,18 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import { useEffect } from "react";
+import { useAuth } from "../context/AuthContext";
 import Navbar from "../utils/components/navbar";
+import enUS from "../locales/en-US.json";
+import idID from "../locales/id-ID.json";
 
 const Home: NextPage = () => {
+    const { getLanguagePreference } = useAuth();
+    const lang: { [key: string]: any } = {
+        enUS: enUS.home,
+        idID: idID.home,
+    };
+
     return (
         <>
             <Navbar />
@@ -10,17 +20,16 @@ const Home: NextPage = () => {
                 <div className="grid max-w-screen-xl px-4 py-8 mx-auto md:gap-0 md:py-16 md:grid-cols-12">
                     <div className="mr-auto place-self-center md:col-span-7">
                         <h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">
-                            One step ahead to your financial dream
+                            {lang[getLanguagePreference()].section1Heading}
                         </h1>
                         <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                            Learning financial education with us to make your
-                            money.
+                            {lang[getLanguagePreference()].section1Description}
                         </p>
                         <a
                             href="/register"
                             className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
                         >
-                            Get started
+                            {lang[getLanguagePreference()].section1Button}
                             <svg
                                 className="w-5 h-5 ml-2 -mr-1"
                                 fill="currentColor"
@@ -49,22 +58,18 @@ const Home: NextPage = () => {
             <section className="bg-gray-100 dark:bg-gray-900 pt-5">
                 <div className="mb-8 lg:mb-16 text-center">
                     <h2 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white">
-                        Educating to elevate money making
+                        {lang[getLanguagePreference()].section2Heading1}
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400">
-                        We come to help and provide a better education about
-                        money to build the relevant mindset of money perspective
-                        and money management.
+                        {lang[getLanguagePreference()].section2Description1}
                     </p>
                 </div>
                 <div className=" mb-8 lg:mb-16 text-center">
                     <h2 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white">
-                        Offering job opportunity only for you
+                        {lang[getLanguagePreference()].section2Heading2}
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400">
-                        We come to help and provide a better education about
-                        money to build the relevant mindset of money perspective
-                        and money management.
+                        {lang[getLanguagePreference()].section2Description2}
                     </p>
                 </div>
             </section>
@@ -72,7 +77,7 @@ const Home: NextPage = () => {
             <section className="bg-gray-50 dark:bg-gray-800">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                     <h2 className="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white text-center pb-4">
-                        Features
+                        {lang[getLanguagePreference()].section3Features}
                     </h2>
                     <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                         <div>
@@ -91,10 +96,16 @@ const Home: NextPage = () => {
                                 </svg>
                             </div>
                             <h3 className="mb-2 text-xl font-bold dark:text-white">
-                                Up to date
+                                {
+                                    lang[getLanguagePreference()]
+                                        .section3Features1
+                                }
                             </h3>
                             <p className="text-gray-500 dark:text-gray-400">
-                                Financial news always keep updated
+                                {
+                                    lang[getLanguagePreference()]
+                                        .section3Description1
+                                }
                             </p>
                         </div>
                         <div>
@@ -109,11 +120,16 @@ const Home: NextPage = () => {
                                 </svg>
                             </div>
                             <h3 className="mb-2 text-xl font-bold dark:text-white">
-                                Exclusive
+                                {
+                                    lang[getLanguagePreference()]
+                                        .section3Features2
+                                }
                             </h3>
                             <p className="text-gray-500 dark:text-gray-400">
-                                Exclusively educate yourself with financial
-                                knowledge
+                                {
+                                    lang[getLanguagePreference()]
+                                        .section3Description2
+                                }
                             </p>
                         </div>
                         <div>
@@ -133,12 +149,16 @@ const Home: NextPage = () => {
                                 </svg>
                             </div>
                             <h3 className="mb-2 text-xl font-bold dark:text-white">
-                                All Ages
+                                {
+                                    lang[getLanguagePreference()]
+                                        .section3Features3
+                                }
                             </h3>
                             <p className="text-gray-500 dark:text-gray-400">
-                                Relatable to all walk of people, whether
-                                you&apos;re a student, an umployed, or even an
-                                elderly.
+                                {
+                                    lang[getLanguagePreference()]
+                                        .section3Description3
+                                }
                             </p>
                         </div>
                     </div>
@@ -149,18 +169,16 @@ const Home: NextPage = () => {
                 <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                     <div className="mx-auto max-w-screen-sm text-center">
                         <h2 className="mb-4 text-4xl font-extrabold leading-tight text-gray-900 dark:text-white">
-                            Start creating your Edufin Account Today
+                            {lang[getLanguagePreference()].section4}
                         </h2>
                         <p className="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">
-                            Join our community of finance to post and get access
-                            to hundreds of articles, podcasts, online courses,
-                            and more.
+                            {lang[getLanguagePreference()].section4Description}
                         </p>
                         <a
                             href="#"
                             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                         >
-                            Join Edufin
+                            {lang[getLanguagePreference()].section4Button}
                         </a>
                     </div>
                 </div>
@@ -185,7 +203,10 @@ const Home: NextPage = () => {
                         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                             <div>
                                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                                    Features
+                                    {
+                                        lang[getLanguagePreference()]
+                                            .section4Button
+                                    }
                                 </h2>
                                 <ul className="text-gray-600 dark:text-gray-400">
                                     <li className="mb-4">
@@ -193,7 +214,10 @@ const Home: NextPage = () => {
                                             href="/posts/articles"
                                             className="hover:underline"
                                         >
-                                            Blogs
+                                            {
+                                                lang[getLanguagePreference()]
+                                                    .section4Button
+                                            }
                                         </a>
                                     </li>
                                     <li>
@@ -201,14 +225,20 @@ const Home: NextPage = () => {
                                             href="/jobs"
                                             className="hover:underline"
                                         >
-                                            Job Vacancy
+                                            {
+                                                lang[getLanguagePreference()]
+                                                    .section4Button
+                                            }
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div>
                                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                                    Follow us
+                                    {
+                                        lang[getLanguagePreference()]
+                                            .section4Button
+                                    }
                                 </h2>
                                 <ul className="text-gray-600 dark:text-gray-400">
                                     <li>
@@ -216,7 +246,10 @@ const Home: NextPage = () => {
                                             className="hover:underline"
                                             href="https://discord.gg/YQU4d9vewm"
                                         >
-                                            Discord
+                                            {
+                                                lang[getLanguagePreference()]
+                                                    .section4Button
+                                            }
                                         </a>
                                     </li>
                                 </ul>
@@ -226,11 +259,7 @@ const Home: NextPage = () => {
                     <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                     <div className="sm:flex sm:items-center sm:justify-between">
                         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                            © 2022{" "}
-                            <a href="#" className="hover:underline">
-                                Edufin
-                            </a>
-                            . All Rights Reserved.
+                            {lang[getLanguagePreference()].section4Button}
                         </span>
                         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                             <a
