@@ -17,5 +17,15 @@
         "section4": "Buat akun Edufin anda sekarang",
         "section4Description": "Ikutilah komunitas daripada finansial kami untuk memposting dan menggapai akses ke ratusan artikel, podcast, dsb.",
         "section4Button": "Bergabung dengan Edufin"
+    },
+    "footer": {
+        "section1": "Bahasa",
+        "section1Lang1": "English",
+        "section1Lang2": "Bahasa Indonesia",
+        "section2": "Fitur",
+        "section2Feature1": "Blog",
+        "section2Feature2": "Lowongan",
+        "section3": "Ikuti kami",
+        "section3Feature1": "Discord"
     }
 }
