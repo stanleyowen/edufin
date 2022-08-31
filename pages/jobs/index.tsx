@@ -8,6 +8,7 @@ import {
 } from "firebase/firestore";
 import Job, { IJob } from "../../utils/components/jobs/job";
 import Navbar from "../../utils/components/navbar";
+import Footer from "../../utils/components/footer";
 
 export default function SignIn() {
     const [Jobs, setJobs] = useState<IJob[]>();
@@ -55,6 +56,7 @@ export default function SignIn() {
                     })
                 )}
             </div>
+            <Footer />
         </>
     );
 }

@@ -3,9 +3,10 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import Navbar from "../utils/components/navbar";
+import Footer from "../utils/components/footer";
+
 import enUS from "../locales/en-US.json";
 import idID from "../locales/id-ID.json";
-import Footer from "../utils/components/footer";
 
 const Home: NextPage = () => {
     const { getLanguagePreference } = useAuth();

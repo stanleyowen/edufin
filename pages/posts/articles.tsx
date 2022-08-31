@@ -7,6 +7,7 @@ import {
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Blogs, { IBlog } from "../../utils/components/blog/blogs";
+import Footer from "../../utils/components/footer";
 import Navbar from "../../utils/components/navbar";
 
 export default function Articles() {
@@ -71,6 +72,7 @@ export default function Articles() {
                     )}
                 </div>
             </div>
+            <Footer />
         </>
     );
 }

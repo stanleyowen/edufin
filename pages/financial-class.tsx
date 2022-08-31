@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Footer from "../utils/components/footer";
 import Navbar from "../utils/components/navbar";
 
 export default function SignIn() {
@@ -16,7 +17,7 @@ export default function SignIn() {
                                     </h1>
                                     <p className="mb-3 text-gray-500 dark:text-gray-400">
                                         Financial Class is an undergoing
-                                        experimnetal feature and is currently
+                                        experimental feature and is currently
                                         unavailable right now. This feature is
                                         being tested and will be rolled out as
                                         soon as possible.
@@ -27,6 +28,7 @@ export default function SignIn() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
