@@ -27,5 +27,25 @@
         "section2Feature2": "Lowongan",
         "section3": "Ikuti kami",
         "section3Feature1": "Discord"
+    },
+    "login": {
+        "section1": "Masuk",
+        "section1Description": "Bergabunglah dengan komunitas keuangan kami untuk memposting dan mendapatkan akses ke ratusan artikel, podcast, kursus online, dan banyak lagi.",
+        "emailAddress": "Alamat Email",
+        "password": "Kata Sandi",
+        "forgotPasword": "Lupa Kata Sandi?",
+        "createAccount1": "Masih belum mempunya akun? ",
+        "createAccount2": "Bergabung sekarang",
+        "section2Button": "Masuk"
+    },
+    "register": {
+        "section1": "Registrasi",
+        "section1Description": "Bergabunglah dengan komunitas keuangan kami untuk memposting dan mendapatkan akses ke ratusan artikel, podcast, kursus online, dan banyak lagi.",
+        "emailAddress": "Alamat Email",
+        "password": "Kata Sandi",
+        "confirmPassword": "Konfirmasi Kata Sandi",
+        "section2Button": "Daftar",
+        "login1": "Sudah mempunyai akun? ",
+        "login2": "Masuk sekarang."
     }
 }

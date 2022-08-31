@@ -4,8 +4,11 @@ import { useAuth } from "../context/AuthContext";
 import Navbar from "../utils/components/navbar";
 import { Alert, LoadingAnimate } from "./api/icons";
 
+import enUS from "../locales/en-US.json";
+import idID from "../locales/id-ID.json";
+
 export default function SignIn() {
-    const { signIn } = useAuth();
+    const { signIn, getLanguagePreference } = useAuth();
     const [isLoading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
     const [data, setData] = useState<{
@@ -15,6 +18,10 @@ export default function SignIn() {
         email: "",
         password: "",
     });
+    const lang: { [key: string]: any } = {
+        enUS: enUS.login,
+        idID: idID.login,
+    };
 
     const handleData = (e: React.ChangeEvent<HTMLInputElement>) => {
         setData({
@@ -64,12 +71,13 @@ export default function SignIn() {
                                         </div>
                                     )}
                                     <h1 className="mb-3 text-2xl font-bold text-gray-900 lg:text-3xl dark:text-white">
-                                        Sign In
+                                        {lang[getLanguagePreference()].section1}
                                     </h1>
                                     <p className="mb-3 text-gray-500 dark:text-gray-400">
-                                        Join our community of finance to post
-                                        and get access to hundreds of articles,
-                                        podcasts, online courses, and more.
+                                        {
+                                            lang[getLanguagePreference()]
+                                                .section1Description
+                                        }
                                     </p>
                                     <form className="mt-8 space-y-6">
                                         <div>
@@ -77,14 +85,22 @@ export default function SignIn() {
                                                 htmlFor="email"
                                                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                             >
-                                                Email Address
+                                                {
+                                                    lang[
+                                                        getLanguagePreference()
+                                                    ].emailAddress
+                                                }
                                             </label>
                                             <input
                                                 autoFocus
                                                 id="email"
                                                 type="email"
                                                 name="email"
-                                                placeholder="Email Address"
+                                                placeholder={
+                                                    lang[
+                                                        getLanguagePreference()
+                                                    ].emailAddress
+                                                }
                                                 value={data.email}
                                                 onChange={handleData}
                                                 className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -95,13 +111,21 @@ export default function SignIn() {
                                                 htmlFor="password"
                                                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                             >
-                                                Password
+                                                {
+                                                    lang[
+                                                        getLanguagePreference()
+                                                    ].password
+                                                }
                                             </label>
                                             <input
                                                 type="password"
                                                 name="password"
                                                 id="password"
-                                                placeholder="Password"
+                                                placeholder={
+                                                    lang[
+                                                        getLanguagePreference()
+                                                    ].password
+                                                }
                                                 value={data.password}
                                                 onChange={handleData}
                                                 className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -113,7 +137,11 @@ export default function SignIn() {
                                                 className="ml-auto text-sm text-blue-700 dark:text-blue-500 hover:underline"
                                                 href="/forgot-password/"
                                             >
-                                                Forgot Password?
+                                                {
+                                                    lang[
+                                                        getLanguagePreference()
+                                                    ].forgotPasword
+                                                }
                                             </a>
                                         </div>
                                         <button
@@ -126,15 +154,25 @@ export default function SignIn() {
                                             {isLoading && (
                                                 <LoadingAnimate className="inline w-4 h-4 mr-3 text-white animate-spin" />
                                             )}
-                                            Sign In
+                                            {
+                                                lang[getLanguagePreference()]
+                                                    .section2Button
+                                            }
                                         </button>
                                         <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                                            Not registered?{" "}
+                                            {
+                                                lang[getLanguagePreference()]
+                                                    .createAccount1
+                                            }
                                             <Link
                                                 className="ml-1 text-blue-700 hover:underline dark:text-blue-500"
                                                 href="/register/"
                                             >
-                                                Create an account.
+                                                {
+                                                    lang[
+                                                        getLanguagePreference()
+                                                    ].createAccount2
+                                                }
                                             </Link>
                                         </div>
                                     </form>

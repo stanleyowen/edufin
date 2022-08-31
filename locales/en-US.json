@@ -19,10 +19,33 @@
         "section4Button": "Join Edufin"
     },
     "footer": {
-        "section1": "Features",
-        "section1Feature1": "Blogs",
-        "section1Feature2": "Job Vacancy",
-        "section2": "Follow Us",
-        "section2Feature1": "Discord"
+        "section1": "Languages",
+        "section1Lang1": "English",
+        "section1Lang2": "Bahasa Indonesia",
+        "section2": "Features",
+        "section2Feature1": "Blogs",
+        "section2Feature2": "Job Vacancy",
+        "section3": "Follow Us",
+        "section3Feature1": "Discord"
+    },
+    "login": {
+        "section1": "Sign In",
+        "section1Description": "Join our community of finance to post and get access to hundreds of articles, podcasts, online courses, and more.",
+        "emailAddress": "Email Address",
+        "password": "Password",
+        "forgotPasword": "Forgot Password?",
+        "createAccount1": "Not resgistered? ",
+        "createAccount2": "Create an account",
+        "section2Button": "Sign In"
+    },
+    "register": {
+        "section1": "Create an account",
+        "section1Description": "Join our community of finance to post and get access to hundreds of articles, podcasts, online courses, and more.",
+        "emailAddress": "Email Address",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "section2Button": "Sign Up",
+        "login1": "Already have an account? ",
+        "login2": "Login here."
     }
 }
