@@ -47,5 +47,30 @@
         "section2Button": "Daftar",
         "login1": "Sudah mempunyai akun? ",
         "login2": "Masuk sekarang."
+    },
+    "navbar": {
+        "home": "Beranda",
+        "articles": "Artikel",
+        "jobs": "Lowongan",
+        "financialClass": "Kelas Finansial",
+        "signIn": "Masuk",
+        "signUp": "Daftar",
+        "signOut": "Keluar",
+        "writeArticle": "Tulis Artikel",
+        "postJob": "Pasang Lowongan"
+    },
+    "financialClass": {
+        "description": "Kelas finansial adalah fitur yang sedang berada dalam tahap eksperimental yang saat ini tidak tersedia untuk publik. Fitur ini sedang dalam pengujian dan akan diluncurkan segera mungkin."
+    },
+    "writePost": {
+        "title": "Judul",
+        "cancel": "Batal",
+        "post": "Unggah"
+    },
+    "postJob": {
+        "title": "Lowongan Pekerjaan",
+        "company": "Nama Perusahaan",
+        "cancel": "Batal",
+        "post": "Unggah"
     }
 }

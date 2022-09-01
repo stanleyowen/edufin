@@ -47,5 +47,30 @@
         "section2Button": "Sign Up",
         "login1": "Already have an account? ",
         "login2": "Login here."
+    },
+    "navbar": {
+        "home": "Home",
+        "articles": "Articles",
+        "jobs": "Jobs",
+        "financialClass": "Financial Class",
+        "signin": "Sign In",
+        "signup": "Sign Up",
+        "signOut": "Sign Out",
+        "writeArticle": "Write a Post",
+        "postJob": "Post a Job"
+    },
+    "financialClass": {
+        "description": "Financial Class is an undergoing experimental feature and is currently unavailable right now. This feature is being tested and will be rolled out as soon as possible."
+    },
+    "writePost": {
+        "title": "Title",
+        "cancel": "Cancel",
+        "post": "Post"
+    },
+    "postJob": {
+        "title": "Job Title",
+        "company": "Company",
+        "cancel": "Cancel",
+        "post": "Post"
     }
 }

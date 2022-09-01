@@ -2,7 +2,17 @@ import Link from "next/link";
 import Footer from "../utils/components/footer";
 import Navbar from "../utils/components/navbar";
 
+import enUS from "../locales/en-US.json";
+import idID from "../locales/id-ID.json";
+import { useAuth } from "../context/AuthContext";
+
 export default function SignIn() {
+    const { getLanguagePreference } = useAuth();
+    const lang: { [key: string]: any } = {
+        enUS: enUS.financialClass,
+        idID: idID.financialClass,
+    };
+
     return (
         <>
             <Navbar />
@@ -16,11 +26,10 @@ export default function SignIn() {
                                         Woops!
                                     </h1>
                                     <p className="mb-3 text-gray-500 dark:text-gray-400">
-                                        Financial Class is an undergoing
-                                        experimental feature and is currently
-                                        unavailable right now. This feature is
-                                        being tested and will be rolled out as
-                                        soon as possible.
+                                        {
+                                            lang[getLanguagePreference()]
+                                                .description
+                                        }
                                     </p>
                                 </div>
                             </div>

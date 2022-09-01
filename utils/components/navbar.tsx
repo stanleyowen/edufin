@@ -2,8 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useAuth } from "../../context/AuthContext";
 
+import enUS from "../../locales/en-US.json";
+import idID from "../../locales/id-ID.json";
+
 export default function Navbar() {
-    const { user } = useAuth();
+    const { user, getLanguagePreference } = useAuth();
+    const lang: { [key: string]: any } = {
+        enUS: enUS.navbar,
+        idID: idID.navbar,
+    };
 
     return (
         <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-slate-700 sticky top-0 z-50">
@@ -31,7 +38,7 @@ export default function Navbar() {
                                     type="button"
                                     className="text-dark dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 hover:text-slate-400"
                                 >
-                                    Sign Out
+                                    {lang[getLanguagePreference()].signOut}
                                 </button>
                             </Link>
                             <Link href={"/posts/write"}>
@@ -39,7 +46,7 @@ export default function Navbar() {
                                     type="button"
                                     className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                 >
-                                    Write a Post
+                                    {lang[getLanguagePreference()].writeArticle}
                                 </button>
                             </Link>
                             <Link href={"/jobs/write"}>
@@ -47,7 +54,7 @@ export default function Navbar() {
                                     type="button"
                                     className="text-dark dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 hover:text-slate-400"
                                 >
-                                    Post a Job
+                                    {lang[getLanguagePreference()].postJob}
                                 </button>
                             </Link>
                         </>
@@ -58,7 +65,7 @@ export default function Navbar() {
                                     type="button"
                                     className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                 >
-                                    Sign In
+                                    {lang[getLanguagePreference()].signIn}
                                 </button>
                             </Link>
                             <Link href={"/register"}>
@@ -66,7 +73,7 @@ export default function Navbar() {
                                     type="button"
                                     className="text-dark dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 hover:text-slate-400"
                                 >
-                                    Sign Up
+                                    {lang[getLanguagePreference()].signUp}
                                 </button>
                             </Link>
                         </>
@@ -117,17 +124,23 @@ export default function Navbar() {
                     <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                         <li className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                             <Link href="/" aria-current="page">
-                                Home
+                                {lang[getLanguagePreference()].home}
                             </Link>
                         </li>
                         <li className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                            <Link href="/posts/articles">Articles</Link>
+                            <Link href="/posts/articles">
+                                {lang[getLanguagePreference()].articles}
+                            </Link>
                         </li>
                         <li className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                            <Link href="/jobs">Jobs</Link>
+                            <Link href="/jobs">
+                                {lang[getLanguagePreference()].jobs}
+                            </Link>
                         </li>
                         <li className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                            <Link href="/financial-class">Financial Class</Link>
+                            <Link href="/financial-class">
+                                {lang[getLanguagePreference()].financialClass}
+                            </Link>
                         </li>
                     </ul>
                 </div>
