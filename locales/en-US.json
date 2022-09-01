@@ -53,8 +53,8 @@
         "articles": "Articles",
         "jobs": "Jobs",
         "financialClass": "Financial Class",
-        "signin": "Sign In",
-        "signup": "Sign Up",
+        "signIn": "Sign In",
+        "signUp": "Sign Up",
         "signOut": "Sign Out",
         "writeArticle": "Write a Post",
         "postJob": "Post a Job"
