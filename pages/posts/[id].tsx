@@ -23,7 +23,7 @@ const Article = () => {
                 setIsLoading(false);
             }
         });
-    }, []);
+    }, [id]);
 
     return (
         <>
