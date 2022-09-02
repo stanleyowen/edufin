@@ -25,11 +25,14 @@ export default function Articles() {
                 .map((doc) => {
                     // trim the content to only show the first 40 words
                     let content = doc.data().content;
-                    content = content
-                        .split(" ")
-                        .slice(0, 40)
-                        .join(" ")
-                        .concat("...");
+                    let splitted_content = content.split(" ");
+                    content =
+                        splitted_content.length > 40
+                            ? splitted_content
+                                  .slice(0, 40)
+                                  .join(" ")
+                                  .concat("...")
+                            : splitted_content;
 
                     return Object.assign(doc.data(), {
                         id: doc.id,
