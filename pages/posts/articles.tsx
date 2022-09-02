@@ -1,3 +1,4 @@
+import { signInAnonymously } from "firebase/auth";
 import {
     collection,
     getDocs,
@@ -6,6 +7,7 @@ import {
     query,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import { useAuth } from "../../context/AuthContext";
 import Blogs, { IBlog } from "../../utils/components/blog/blogs";
 import Footer from "../../utils/components/footer";
 import Navbar from "../../utils/components/navbar";
@@ -13,25 +15,31 @@ import Navbar from "../../utils/components/navbar";
 export default function Articles() {
     const [Articles, setArticles] = useState<IBlog[]>();
     const [isLoading, setIsLoading] = useState<boolean>(true);
+    const { getLanguagePreference } = useAuth();
     useEffect(() => {
         // get latest 10 posts from `posts` firestore collection
         getDocs(
             query(collection(getFirestore(), "posts"), orderBy("createdAt"))
         ).then((snap) => {
-            let docs = snap.docs.map((doc) => {
-                // trim the content to only show the first 40 words
-                let content = doc.data().content;
-                content = content
-                    .split(" ")
-                    .slice(0, 40)
-                    .join(" ")
-                    .concat("...");
+            let docs = snap.docs
+                .map((doc) => {
+                    // trim the content to only show the first 40 words
+                    let content = doc.data().content;
+                    content = content
+                        .split(" ")
+                        .slice(0, 40)
+                        .join(" ")
+                        .concat("...");
 
-                return Object.assign(doc.data(), {
-                    id: doc.id,
-                    content,
+                    return Object.assign(doc.data(), {
+                        id: doc.id,
+                        content,
+                        lang: doc.data().lang,
+                    });
+                })
+                .sort((a, b) => {
+                    return a.lang === getLanguagePreference() ? -1 : 1;
                 });
-            });
             setArticles(docs as IBlog[]);
             setIsLoading(false);
         });
@@ -66,6 +74,7 @@ export default function Articles() {
                                     content={element.content}
                                     email={element.email}
                                     createdAt={element.createdAt}
+                                    lang={element.lang}
                                 />
                             );
                         })

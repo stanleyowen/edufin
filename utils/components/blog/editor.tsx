@@ -24,6 +24,7 @@ const BlogEditor = () => {
             title,
             email: user.email,
             content: String(stateToHTML(editorState.getCurrentContent())),
+            lang: getLanguagePreference(),
             createdAt: new Date().toLocaleDateString(),
         })
             .then(() => {

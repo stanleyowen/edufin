@@ -7,6 +7,7 @@ export interface IBlog {
     createdAt: string;
     modifiedAt?: string;
     id: string;
+    lang: string;
 }
 
 export default function Blogs(data: IBlog) {
